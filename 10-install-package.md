@@ -20,3 +20,17 @@
 После установке всего нескольких пакетов папка **node_modules** уже может содержать очень много папок пакетов-зависимостей `dependencies` от других пакетов. Зависимости можно посмотреть в файле `package-lock.json` каждого пакета или через команду в терминале:
 
 - `npm list --all` - посмотреть иерархию зависимостей вашего проекта
+
+## Популярные пакеты
+- chalk - раскрашивает текст в терминале `npm install chalk`
+    - https://www.npmjs.com/package/chalk
+
+В файле main.js пишем:
+
+    // const chalk = require('chalk'); // через require уже не работает
+
+    import chalk from 'chalk'; // ES6, не забудьте поставить "type": "module" в package.json
+    console.log(chalk.blue('Hello world!'));
+    console.log(chalk.bgGreen('Hello world!'));
+
+- glob - удаляет файлы в папках и подпапках
